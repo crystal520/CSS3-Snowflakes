@@ -20,17 +20,54 @@ body {
 .snowflake {
 	position: absolute;
 	display: inline-block;
-	background-color: white;
 	opacity: 0.5;
-	height: 7px;
-	width: 7px;
+	height: 1px;
+	width: 1px;
 	z-index: -1;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
 	-webkit-transform-origin: left -20px;
-	-webkit-animation: falling 7.7s linear 2s infinite;
-	-moz-animation: falling 7.7s linear 2s infinite;
+	-webkit-animation: falling 10.7s linear 2s infinite;
+	-moz-animation: falling 10.7s linear 2s infinite;
+	
+	border: 1px solid #fff;
+	border-width: 1px 0 1px 0;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	-moz-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+}
+
+.snowflake:before {
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	content: '';
+	height: 5%;
+	left: -100%;
+	position: absolute;
+	top: 50%;
+	width: 250%;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	-moz-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+}
+.snowflake:after {
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.150);
+	content: '';
+	height: 5%;
+	left: -75%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	width: 250%;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	-moz-box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+	box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
 }
 
 /* animation used for ALL snowflakes, 1000px will be updated by Snowflakes.create() to reflect true height of window */
@@ -54,20 +91,20 @@ body {
 
 /* different sizes, and default origins based on size */
 .snowflakeSizeLRG {
-	height:11px;
-	width:11px;
+	height:7px;
+	width:7px;
 	-webkit-transform-origin: left -30px;
 	-moz-transform-origin: left -30px;
 }
 .snowflakeSizeMED {
-	height:9px;
-	width:9px;
+	height:5px;
+	width:5px;
 	-webkit-transform-origin: left -30px;
 	-moz-transform-origin: left -30px;
 }
 .snowflakeSizeSM {
-	height:5px;
-	width:5px;
+	height:3px;
+	width:3px;
 	-webkit-transform-origin: -30px 0;
 	-moz-transform-origin: -30px 0;
 }
